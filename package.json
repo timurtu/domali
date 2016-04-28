@@ -2,7 +2,7 @@
   "name": "domali",
   "version": "1.3.2",
   "description": "Alias library for using the DOM API",
-  "main": "dist/domali.js",
+  "main": "lib/domali.js",
   "jspmNodeConversion": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
