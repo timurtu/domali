@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const babel = require('gulp-babel');
 
 const paths = {
-  src: "./src/**/*.js"
+  src: "./src/**/*.js",
   dest: "./lib"
 }
 
