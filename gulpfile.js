@@ -2,8 +2,8 @@ const gulp = require('gulp');
 const babel = require('gulp-babel');
 
 const paths = {
-  src: "./src/**/*.js",
-  dest: "./lib"
+  src: "src/**/*.js",
+  dest: "lib"
 }
 
 gulp.task('build', () => {
