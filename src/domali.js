@@ -4,10 +4,11 @@
 export default {
 
   getId(...ids) {
-    // ids.forEach((id, i) => {
-    //   ids[i] = document.getElementById(id)
-    // })
-    return ids.map(id => document.getElementById(id))
+    if (ids.length > 1) {
+      return ids.map(id => document.getElementById(id))
+    } else {
+      return document.getElementById(ids[0])
+    }
   }
 
 }
