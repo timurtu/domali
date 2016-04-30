@@ -20,29 +20,9 @@ import dom from 'domali'
 Dom API | Domali
 --- | ---
 `const foo = document.getElementById('foo')` | `const [ foo, bar, baz ] = dom.getId('foo', 'bar', 'baz')`
-`const bar = document.getElementById('bar')` | `console.log(foo, bar, baz)`
+`const bar = document.getElementById('bar')` |
 `const baz = document.getElementById('baz')` |
-`console.log(foo, bar, baz)` |
-
-#### domali
-```javascript
-const [ foo, bar, baz ] = dom.getId('foo', 'bar', 'baz')
-
-console.log(foo, bar, baz)
-```
-
-
-#### DOM API
-
-```javascript
-const foo = document.getElementById('foo');
-
-const bar = document.getElementById('bar');
-
-const baz = document.getElementById('baz');
-
-console.log(foo, bar, baz)
-```
+`console.log(foo, bar, baz)` | `console.log(foo, bar, baz)`
 
 ## Problem Statement
 - No matter how
