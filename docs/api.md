@@ -1,3 +1,5 @@
+# Domali Documentation
+
 ## Install with JSPM
 
 `jspm install domali`
