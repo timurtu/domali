@@ -1,6 +1,6 @@
 {
   "name": "domali",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Alias library for using the DOM API",
   "main": "lib/domali.js",
   "jspmNodeConversion": "true",
