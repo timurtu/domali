@@ -27,7 +27,12 @@ DOM API | domali
 ### Get Elements by Class Name
 DOM API | domali
 --- | ---
-`document.getElementsByClassName('foo')` | dom.getClass('foo')
+`document.getElementsByClassName('foo')` | `dom.getClass('foo')`
+
+### Get Elements by Tag Name
+DOM API | domali
+--- | ---
+`document.getElementsByTagName('div')` | `dom.getTags('div')`
 
 ### Selecting an Element
 DOM API | domali
