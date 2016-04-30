@@ -16,6 +16,14 @@ all of the native JavaScript DOM functions and objects with domali.
 import dom from 'domali'
 ```
 
+
+Dom API | Domali
+--- | ---
+`const foo = document.getElementById('foo')` | `const [ foo, bar, baz ] = dom.getId('foo', 'bar', 'baz')`
+`const bar = document.getElementById('bar')` | `console.log(foo, bar, baz)`
+`const baz = document.getElementById('baz')` |
+`console.log(foo, bar, baz)` |
+
 #### domali
 ```javascript
 const [ foo, bar, baz ] = dom.getId('foo', 'bar', 'baz')
