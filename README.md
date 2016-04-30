@@ -1,6 +1,6 @@
 # Alias Library for the DOM API
 
-domali's goal is to provide a JavaScript DOM API that is less verbose and
+The goal of domali is to provide a JavaScript DOM API that is less verbose and
 more readable, while keeping the core functionality intact. You can use
 all of the native JavaScript DOM functions and objects with domali.
 
@@ -18,6 +18,6 @@ over the native DOM API.
 
 ## Features
 
-- domali checks if elements and properties exist before accessing and mutating
-them. This means that using domali, you'll never need to call `hasChildNode()`
-or `elem.classList.contains('class-name')` again.
+- Using domali, you'll never need to call `elem.classList.contains('class-name')`
+or `node.hasChildNode()` again because domali checks to see if
+elements and properties exist before accessing and mutating them.
