@@ -6,7 +6,7 @@
   "jspmNodeConversion": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bugfix": "git add . && git commit -m 'bug fix' && npm version patch && npm publish && cd app && jspm install && cd ..",
+    "bugfix": "git add . && git commit -m 'bug fix' && npm version patch && npm publish && cd app && jspm install domali && cd ..",
     "prepublish": "gulp build"
   },
   "repository": {
