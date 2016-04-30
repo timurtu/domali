@@ -23,3 +23,18 @@ DOM API | domali
 `const bar = document.getElementById('bar')` |
 `const baz = document.getElementById('baz')` |
 `console.log(foo, bar, baz)` | `console.log(foo, bar, baz)`
+
+### Get Elements by Class Name
+DOM API | domali
+--- | ---
+`document.getElementsByClassName('foo')` | dom.getClass('foo')
+
+### Selecting an Element
+DOM API | domali
+--- | ---
+`document.querySelector('#foo')` | `dom.select('#foo')`
+
+### Selecting Multiple Elements
+DOM API | domali
+--- | ---
+`document.querySelectorAll('.bar')` | `dom.selectAll('.bar')`

@@ -16,6 +16,18 @@ export default {
     } else {
       return document.getElementById(ids[0])
     }
+  },
+
+  getClass(className) {
+    return document.getElementsByClassName(className)
+  },
+
+  select(query) {
+    return document.querySelector(query)
+  },
+
+  selectAll(query) {
+    return document.querySelectorAll(query)
   }
 
 }
