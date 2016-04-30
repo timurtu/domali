@@ -3,6 +3,13 @@
  */
 export default {
 
+  /**
+   * Return one or many elements by getting them by id.
+   *
+   * @param ids Any number of id strings
+   * @returns {*} elements as separate variables to be used
+   * with destructuring.
+   */
   getId(...ids) {
     if (ids.length > 1) {
       return ids.map(id => document.getElementById(id))
