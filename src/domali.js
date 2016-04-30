@@ -22,6 +22,10 @@ export default {
     return document.getElementsByClassName(className)
   },
 
+  getTags(tagName) {
+    return document.getElementsByTagName(tagName)
+  },
+
   select(query) {
     return document.querySelector(query)
   },
