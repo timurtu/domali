@@ -4,10 +4,10 @@
 export default {
 
   getId(...ids) {
-    ids.forEach((id, i) => {
-      ids[i] = document.getElementById(id)
-    })
-    return ids
+    // ids.forEach((id, i) => {
+    //   ids[i] = document.getElementById(id)
+    // })
+    return ids.map(id => document.getElementById(id))
   }
-  
+
 }
