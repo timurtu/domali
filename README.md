@@ -4,7 +4,18 @@ The goal of domali is to provide a JavaScript DOM API that is less verbose and
 more readable, while keeping the core functionality intact. You can use
 all of the native JavaScript DOM functions and objects with domali.
 
-### Read the [Documentation](docs/api.md)
+## Install
+`jspm install domali`
+
+## Usage
+```javascript
+import dom from 'domali'
+
+const [ foo, bar, baz ] = dom.getId('foo', 'bar', 'baz')
+
+console.log(foo, bar, baz)
+```
+> For more, refer to the [Documentation](docs/api.md)
 
 ## Problem Statement
 - No matter how

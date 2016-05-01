@@ -1,11 +1,10 @@
 # domali docs
 
-## Install with [JSPM](http://jspm.io)
+## Install domali with [JSPM](http://jspm.io)
 
 `jspm install domali`
 
-
-## Usage
+## Using domali
 
 ```javascript
 import dom from 'domali'
