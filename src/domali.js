@@ -41,6 +41,4 @@ export default {
    selectAll(query) {
     return document.querySelectorAll(query)
   }
-
-
 }
