@@ -1,45 +1,57 @@
 /**
  * Created by timur on 4/27/16.
  */
+
+let _document = document;
+
 export default {
 
   /**
    * Return one or many elements by getting them by id.
    *
    * @param ids Any number of id strings
-   * @returns {*} elements as separate variables to be used
-   * with destructuring.
+   * @returns elements as an array
    */
   getId(...ids) {
     if (ids.length > 1) {
-      return ids.map(id => document.getElementById(id))
+      return ids.map(id => _document.getElementById(id))
     } else {
-      return document.getElementById(ids[0])
+      return _document.getElementById(ids[0])
     }
   },
 
+  /**
+   * Return one or many elements created with their tagname
+   *
+   * @param element Any number of element tag strings
+   * @returns elements as an array
+   */
   create(...elements) {
     if (elements.length > 1) {
-      return elements.map(element => document.createElement(element))
+      return elements.map(element => _document.createElement(element))
     } else {
-      return document.createElement(elements[0])
+      return _document.createElement(elements[0])
     }
+  },
+
+  getClass(className) {
+    return _document.getElementsByClassName(className)
   },
 
    getClass(className) {
-    return document.getElementsByClassName(className)
+    return _document.getElementsByClassName(className)
   },
 
    getTags(tagName) {
-    return document.getElementsByTagName(tagName)
+    return _document.getElementsByTagName(tagName)
   },
 
-   select(query) {
-    return document.querySelector(query)
+  selectAll(query) {
+    return _document.querySelectorAll(query)
   },
 
-   selectAll(query) {
-    return document.querySelectorAll(query)
+  bindElement(element) {
+    _document = element;
   }
 
 }
