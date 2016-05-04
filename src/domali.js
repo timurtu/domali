@@ -1,6 +1,9 @@
 /**
  * Created by timur on 4/27/16.
  */
+ 
+let _document = document;
+
 export default {
 
   /**
@@ -12,26 +15,30 @@ export default {
    */
   getId(...ids) {
     if (ids.length > 1) {
-      return ids.map(id => document.getElementById(id))
+      return ids.map(id => _document.getElementById(id))
     } else {
-      return document.getElementById(ids[0])
+      return _document.getElementById(ids[0])
     }
   },
 
   getClass(className) {
-    return document.getElementsByClassName(className)
+    return _document.getElementsByClassName(className)
   },
 
   getTags(tagName) {
-    return document.getElementsByTagName(tagName)
+    return _document.getElementsByTagName(tagName)
   },
 
   select(query) {
-    return document.querySelector(query)
+    return _document.querySelector(query)
   },
 
   selectAll(query) {
-    return document.querySelectorAll(query)
-  }
+    return _document.querySelectorAll(query)
+  },
+  
+  bindElement(element) {
+    _document = element;
+  },
 
 }
