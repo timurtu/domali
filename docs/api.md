@@ -21,7 +21,18 @@ DOM API | domali
 `const foo = document.getElementById('foo')` | `const [ foo, bar, baz ] = dom.getId('foo', 'bar', 'baz')`
 `const bar = document.getElementById('bar')` |
 `const baz = document.getElementById('baz')` |
-`console.log(foo, bar, baz)` | `console.log(foo, bar, baz)`
+
+### Create Element
+DOM API | domali
+--- | ---
+`document.createElement('div')` | `dom.create('div')`
+
+### Create Multiple Elements
+DOM API | domali
+--- | ---
+`const p = document.createElement('p')` | `const [ p, a, img ] = dom.create('p', 'a', 'img')`
+`const a = document.createElement('a')` |
+`const img = document.createElement('img')` |
 
 ### Get Elements by Class Name
 DOM API | domali

@@ -18,20 +18,29 @@ export default {
     }
   },
 
-  getClass(className) {
+  create(...elements) {
+    if (elements.length > 1) {
+      return elements.map(element => document.createElement(element))
+    } else {
+      return document.createElement(elements[0])
+    }
+  },
+
+   getClass(className) {
     return document.getElementsByClassName(className)
   },
 
-  getTags(tagName) {
+   getTags(tagName) {
     return document.getElementsByTagName(tagName)
   },
 
-  select(query) {
+   select(query) {
     return document.querySelector(query)
   },
 
-  selectAll(query) {
+   selectAll(query) {
     return document.querySelectorAll(query)
   }
+
 
 }

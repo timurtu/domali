@@ -27,8 +27,9 @@ writing the same code more than once.
 leaner, but also force you to conform to them, taking away your control
 over the native DOM API.
 
-## Features
+## Build
 
-- Using domali, you'll never need to call `elem.classList.contains('class-name')`
-or `node.hasChildNode()` again because domali checks to see if
-elements and properties exist before accessing and mutating them.
+1. Install [node](https://nodejs.org)
+1. Install [git](https://git-scm.org)
+1. `git clone `
+1. `npm install -g gulp`
