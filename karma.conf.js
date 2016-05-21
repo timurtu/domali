@@ -2,18 +2,18 @@ module.exports = function (config) {
 
   config.set({
 
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
-    frameworks: []
+    frameworks: ['mocha'],
 
-      files: [
+    files: [
       {
         pattern: 'test/unit/*.spec.js',
         watched: true,
         served: true,
         included: true
       }
-    ]
-
+    ],
+    reporters: ['spec', 'coverage']
   })
 }
