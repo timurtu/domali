@@ -5,10 +5,7 @@
   "main": "lib/domali.js",
   "jspmNodeConversion": "true",
   "scripts": {
-    "test": "npm-run-all build --parallel mocha watch",
-    "build": "webpack",
-    "watch": "webpack-dev-server --hot --colors --no-info",
-    "mocha": "mocha lib/test.js -w -R nyan",
+    "test": "gulp watch",
     "clean": "rimraf node_modules lib coverage"
   },
   "repository": {

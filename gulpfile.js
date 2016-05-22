@@ -5,8 +5,7 @@ const webpack = require('gulp-webpack')
 const paths = {
   allJS: ['src/**/*.js', 'test/**/*.js'],
   entry: 'src/domali.js',
-  output: './',
-  testEntry: 'test/index.test.js'
+  output: './'
 }
 
 gulp.task('watch', ['test'], () => {
