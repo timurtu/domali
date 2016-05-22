@@ -1,28 +1,29 @@
 const gulp = require('gulp');
-const babel = require('gulp-babel');
-const jasmine = require('gulp-jasmine');
+const Server = require('karma').Server
+const webpack = require('gulp-webpack')
 
 const paths = {
-  src: "src/**/*.js",
-  dest: "lib",
-  testsSrc: 'test/*.js',
-  testsDist: 'test/dist'
+  allJS: ['src/**/*.js', 'test/**/*.js'],
+  entry: 'src/domali.js',
+  output: './',
+  testEntry: 'test/index.test.js'
 }
 
-gulp.task('watch', ['build', 'test'], () => {
-  gulp.watch([paths.src, paths.testsSrc], ['build', 'test'])
+gulp.task('watch', ['test'], () => {
+  gulp.watch(paths.allJS, ['test'])
+})
+
+gulp.task('test', ['build'], (done) => {
+  new Server({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+  }, function () {
+    done()
+  }).start()
 })
 
 gulp.task('build', () => {
-  return gulp.src(paths.src)
-    .pipe(babel({
-      presets: ['es2015']
-    }))
-    .pipe(gulp.dest(paths.dest))
+  return gulp.src(paths.entry)
+    .pipe(webpack(require('./webpack.config')))
+    .pipe(gulp.dest(paths.output))
 })
-
-gulp.task('test', () =>
-  gulp.src(paths.testsSrc)
-  // gulp-jasmine works on filepaths so you can't have any plugins before it
-  .pipe(jasmine())
-)

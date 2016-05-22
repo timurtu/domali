@@ -11,7 +11,8 @@ describe('get methods', function () {
     it('should exist', () => {})
 
     it('should confirm tests are working', () => {
-      expect(true).to.be.false
+      expect(true).to.be.true
     })
+
   })
 })
