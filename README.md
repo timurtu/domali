@@ -31,5 +31,7 @@ over the native DOM API.
 
 1. Install [node](https://nodejs.org)
 1. Install [git](https://git-scm.org)
-1. `git clone `
-1. `npm install -g gulp`
+1. `git clone https://github.com/timurtu/domali.git`
+1. `cd domali`
+1. `npm install` to install dev dependencies
+1. `npm test` to run tests

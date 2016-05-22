@@ -1,24 +1,21 @@
-const path = require('path')
-
 module.exports = {
 
-  context: path.resolve(__dirname, 'src'),
-
   entry: {
-    filename: './index'
+    domali: './src/domali',
+    test: './test/unit/index.test'
   },
 
   output: {
-    filename: 'lib/domali.js',
-    sourceMapFilename: 'lib/domali.js.map'
+    filename: 'lib/[name].js',
+    sourceMapFilename: 'lib/[name].js.map'
   },
 
   module: {
     loaders: [
       {
         test: /\.js/,
-        include: /src/,
-        loader: 'babel-loader'
+        include: /(src|test)/,
+        loader: 'babel-loader?cacheDirectory'
       }
     ]
   }

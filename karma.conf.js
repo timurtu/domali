@@ -4,16 +4,23 @@ module.exports = function (config) {
 
     browsers: ['PhantomJS'],
 
-    frameworks: ['mocha'],
+    frameworks: ['mocha', 'chai'],
 
     files: [
       {
-        pattern: 'test/unit/*.spec.js',
+        pattern: 'lib/test.js',
         watched: true,
         served: true,
         included: true
+      },
+      {
+        pattern: 'lib/**/*.js',
+        watched: true,
+        served: false,
+        included: false
       }
     ],
+
     reporters: ['spec', 'coverage']
   })
 }
