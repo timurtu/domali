@@ -4,7 +4,7 @@ module.exports = function (config) {
 
     browsers: ['PhantomJS'],
 
-    frameworks: ['mocha', 'chai'],
+    frameworks: ['mocha', 'chai', 'sinon'],
 
     files: [
       {
@@ -12,12 +12,6 @@ module.exports = function (config) {
         watched: true,
         served: true,
         included: true
-      },
-      {
-        pattern: 'lib/**/*.js',
-        watched: true,
-        served: false,
-        included: false
       }
     ],
 

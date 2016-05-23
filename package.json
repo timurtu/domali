@@ -5,11 +5,7 @@
   "main": "lib/domali.js",
   "jspmNodeConversion": "true",
   "scripts": {
-    "test": "npm-run-all build --parallel mocha watch",
-    "build": "webpack",
-    "watch": "webpack-dev-server --hot --colors --no-info",
-    "mocha": "mocha lib/test.js -w -R nyan",
-    "clean": "rimraf node_modules lib coverage"
+    "test": "gulp watch"
   },
   "repository": {
     "type": "git",
@@ -33,6 +29,9 @@
     "babel-preset-es2015": "^6.9.0",
     "chai": "^3.5.0",
     "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-changed": "^1.3.0",
+    "gulp-sourcemaps": "^1.6.0",
     "gulp-webpack": "^1.5.0",
     "istanbul-instrumenter-loader": "^0.2.0",
     "karma": "^0.13.22",
@@ -40,6 +39,7 @@
     "karma-coverage": "^1.0.0",
     "karma-mocha": "^1.0.1",
     "karma-phantomjs-launcher": "^1.0.0",
+    "karma-sinon": "^1.0.5",
     "karma-spec-reporter": "0.0.26",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.4.5",
