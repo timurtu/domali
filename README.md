@@ -5,7 +5,10 @@ more readable, while keeping the core functionality intact. You can use
 all of the native JavaScript DOM functions and objects with domali.
 
 ## Install
-`jspm install domali`
+Install domali with either npm or jspm
+- `npm install domal --save`
+
+- `jspm install domali`
 
 ## Usage
 ```javascript
