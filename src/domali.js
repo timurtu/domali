@@ -5,7 +5,7 @@
 import {getId, create, getClass, getTags, select, selectAll} from './selectors'
 
 import {get, set} from './manipulations/nodes'
-import {render} from './manipulations/render'
+import {render, clear} from './manipulations/render'
 
 
 export default {
@@ -20,6 +20,7 @@ export default {
   get,
   set,
 
-  render
+  render,
+  clear
 
 }

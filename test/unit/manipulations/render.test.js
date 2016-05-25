@@ -9,10 +9,26 @@ describe('render', () => {
 
     const foo = dom.create('foo')
 
-    foo.setAttribute('id', 'foo')
+    dom.set(foo, {id: 'foo'})
 
     dom.render(foo)
 
-    assert(dom.getId('foo'))
+    expect(dom.getId('foo')).to.equal(foo)
+  })
+})
+
+describe('clear', () => {
+  it('should remove all elements from the dom', () => {
+
+    const a = dom.create('a')
+
+    dom.set(a, {id: 'link'})
+
+    dom.render(a)
+
+    dom.clear()
+
+    expect(dom.getId('link')).to.be.null
+
   })
 })

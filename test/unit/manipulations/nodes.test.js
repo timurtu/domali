@@ -30,7 +30,7 @@ describe('node functions', () => {
 
       const foobar = dom.create('foobar')
 
-      console.log(dom.set(foobar, {id: 'foobar'}))
+      dom.set(foobar, {id: 'foobar'})
 
       expect(dom.get(foobar, 'id')).to.equal('foobar')
 
