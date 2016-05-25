@@ -1,9 +1,8 @@
 const gulp = require('gulp');
 const Server = require('karma').Server
-const webpack = require('gulp-webpack')
+const webpack = require('webpack-stream')
 const babel = require('gulp-babel')
 const changed = require('gulp-changed')
-const sourcemaps = require('gulp-sourcemaps')
 
 const paths = {
   allJS: 'src/**/*.js',
@@ -37,6 +36,5 @@ gulp.task('build', () => {
   return gulp.src(paths.allJS)
     .pipe(changed(paths.output))
     .pipe(babel())
-    .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.output))
 })
