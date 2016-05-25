@@ -9,11 +9,12 @@ const paths = {
   allJS: 'src/**/*.js',
   output: 'lib',
   testEntry: 'src/test/domali.test.js',
+  allTests: 'test/**/*.js',
   testOutput: './'
 }
 
 gulp.task('watch', ['test'], () => {
-  gulp.watch(paths.allJS, ['test'])
+  gulp.watch([paths.allJS, paths.allTests], ['test'])
 })
 
 gulp.task('test', ['build-tests'], (done) => {

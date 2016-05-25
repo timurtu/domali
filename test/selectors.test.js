@@ -86,11 +86,11 @@ describe('selectors', () => {
 
       dom.create('h1', 'a', 'p')
 
-      testArg(spy, 0, 'h1', 0)
-      testArg(spy, 1, 'a', 0)
-      testArg(spy, 2, 'p', 0)
+      testArg(0, 'h1', spy)
+      testArg(1, 'a', spy)
+      testArg(2, 'p', spy)
 
-      called(3)
+      called(3, spy)
     })
 
   })
@@ -130,7 +130,11 @@ describe('selectors', () => {
     })
 
     it('should call document.getElementsByTagName once', () => {
+
       dom.getTags('input')
+
+      testArg(0, 'input', spy)
+
       called(1, spy)
     })
   })
