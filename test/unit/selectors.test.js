@@ -54,6 +54,12 @@ describe('selectors', () => {
       document.createElement.restore()
     })
 
+    it('should create an element', () => {
+      const div = dom.create('div')
+      expect(div.outerHTML).to.equal('<div></div>')
+      expect(div.innerHTML).to.equal('')
+    })
+
     it('should call document.createElement once', () => {
 
       dom.create('div')

@@ -9,13 +9,9 @@
  * @returns elements as an array
  */
 function getId(...ids) {
-
-  if (ids.length > 1) {
-    return ids.map(id => document.getElementById(id))
-  } else {
-    return document.getElementById(ids[0])
-  }
-
+  return (ids.length > 1) ?
+    ids.map(id => document.getElementById(id)) :
+    document.getElementById(ids[0])
 }
 
 /**
@@ -25,11 +21,9 @@ function getId(...ids) {
  * @returns elements as an array
  */
 function create(...elements) {
-  if (elements.length > 1) {
-    return elements.map(element => document.createElement(element))
-  } else {
-    return document.createElement(elements[0])
-  }
+  return (elements.length > 1) ?
+    elements.map(element => document.createElement(element)) :
+    document.createElement(elements[0])
 }
 
 function getClass(className) {

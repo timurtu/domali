@@ -4,5 +4,12 @@
 
 import dom from 'domali'
 
-console.log(dom.create('foo'))
+const div = dom.create('div')
 
+div.setAttribute('id', 'foo')
+
+document.body.appendChild(div)
+
+div.textContent = 'foo'
+
+console.log(dom.getId('foo'))
