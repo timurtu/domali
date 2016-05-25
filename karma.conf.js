@@ -8,7 +8,7 @@ module.exports = function (config) {
 
     files: [
       {
-        pattern: 'lib/test.js',
+        pattern: 'test/test.js',
         watched: true,
         served: true,
         included: true

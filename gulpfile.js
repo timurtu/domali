@@ -9,7 +9,7 @@ const paths = {
   output: 'lib',
   testEntry: 'src/test/unit/domali.test.js',
   allTests: 'test/unit/**/*.js',
-  testOutput: './'
+  testOutput: './test'
 }
 
 gulp.task('watch', ['test'], () => {
