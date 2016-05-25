@@ -25,17 +25,8 @@ describe('selectors', () => {
       dom.getId('foo')
 
       testArg(0, 'foo', spy)
+
       called(1, spy)
-    })
-
-    it('should call getElementById twice', () => {
-
-      dom.getId('foo', 'bar')
-
-      testArg(0, 'foo', spy)
-      testArg(1, 'bar', spy)
-
-      called(2, spy)
     })
 
     it('should call getElementById 3 times', () => {
@@ -70,16 +61,6 @@ describe('selectors', () => {
       testArg(0, 'div', spy)
 
       called(1, spy)
-    })
-
-    it('calls document.createElement twice', () => {
-
-      dom.create('img', 'script')
-
-      testArg(0, 'img', spy)
-      testArg(1, 'script', spy)
-
-      called(2, spy)
     })
 
     it('calls document.createElement 3 times', () => {
