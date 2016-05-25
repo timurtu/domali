@@ -1,9 +1,11 @@
 {
   "name": "domali",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "Alias library for using the DOM API",
   "main": "lib/domali.js",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "jspmNodeConversion": "true",
   "repository": {
     "type": "git",
