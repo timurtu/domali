@@ -6,7 +6,7 @@ all of the native JavaScript DOM functions and objects with domali.
 
 ## Install
 Install domali with either npm or jspm
-- `npm install domal --save`
+- `npm install domali --save`
 
 - `jspm install domali`
 
