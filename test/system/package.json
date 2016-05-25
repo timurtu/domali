@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "domali": "^1.7.0"
+    "domali": "^1.7.1"
   }
 }

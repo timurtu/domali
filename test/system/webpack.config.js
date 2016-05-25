@@ -3,10 +3,10 @@
  */
 
 module.exports = {
-  entry: './test.js',
+  entry: './app.js',
   output: {
     path: './',
-    filename: 'test.bundle.js'
+    filename: 'bundle.js'
   },
 
   module: {
