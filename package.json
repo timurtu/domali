@@ -4,9 +4,6 @@
   "description": "Alias library for using the DOM API",
   "main": "lib/domali.js",
   "jspmNodeConversion": "true",
-  "scripts": {
-    "test": "gulp watch"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/timurtu/domali.git"
@@ -41,9 +38,6 @@
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-sinon": "^1.0.5",
     "karma-spec-reporter": "0.0.26",
-    "karma-webpack": "^1.7.0",
-    "mocha": "^2.4.5",
-    "npm-run-all": "^1.8.0",
     "phantomjs-prebuilt": "^2.1.7",
     "webpack": "^1.13.1"
   }

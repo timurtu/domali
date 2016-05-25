@@ -2,7 +2,8 @@
  * Created by timur on 5/22/16.
  */
 
-import dom from '../domali'
+import dom from '../lib/domali'
+
 import {assert, expect} from 'chai'
 
 describe('selectors', () => {
@@ -23,34 +24,36 @@ describe('selectors', () => {
 
       dom.getId('foo')
 
-      expect(spy.getCall(0).args[0]).to.equal('foo')
-      expect(spy.callCount).to.equal(1)
+      testArg(0, 'foo', spy)
+      called(1, spy)
     })
 
     it('should call getElementById twice', () => {
 
       dom.getId('foo', 'bar')
 
-      expect(spy.getCall(0).args[0]).to.equal('foo')
-      expect(spy.getCall(1).args[0]).to.equal('bar')
-      expect(spy.callCount).to.equal(2)
+      testArg(0, 'foo', spy)
+      testArg(1, 'bar', spy)
+
+      called(2, spy)
     })
 
     it('should call getElementById 3 times', () => {
 
       dom.getId('foo', 'bar', 'baz')
 
-      expect(spy.getCall(0).args[0]).to.equal('foo')
-      expect(spy.getCall(1).args[0]).to.equal('bar')
-      expect(spy.getCall(2).args[0]).to.equal('baz')
-      expect(spy.callCount).to.equal(3)
+      testArg(0, 'foo', spy)
+      testArg(1, 'bar', spy)
+      testArg(2, 'baz', spy)
+
+      called(3, spy)
     })
 
   })
 
   describe('create', () => {
 
-    let spy
+    var spy
 
     beforeEach(() => {
       spy = sinon.spy(document, 'createElement')
@@ -64,27 +67,30 @@ describe('selectors', () => {
 
       dom.create('div')
 
-      expect(spy.getCall(0).args[0]).to.equal('div')
-      expect(spy.callCount).to.equal(1)
+      testArg(0, 'div', spy)
+
+      called(1, spy)
     })
 
     it('calls document.createElement twice', () => {
 
       dom.create('img', 'script')
 
-      expect(spy.getCall(0).args[0]).to.equal('img')
-      expect(spy.getCall(1).args[0]).to.equal('script')
-      expect(spy.callCount).to.equal(2)
+      testArg(0, 'img', spy)
+      testArg(1, 'script', spy)
+
+      called(2, spy)
     })
 
     it('calls document.createElement 3 times', () => {
 
       dom.create('h1', 'a', 'p')
 
-      expect(spy.getCall(0).args[0]).to.equal('h1')
-      expect(spy.getCall(1).args[0]).to.equal('a')
-      expect(spy.getCall(2).args[0]).to.equal('p')
-      expect(spy.callCount).to.equal(3)
+      testArg(spy, 0, 'h1', 0)
+      testArg(spy, 1, 'a', 0)
+      testArg(spy, 2, 'p', 0)
+
+      called(3)
     })
 
   })
@@ -102,8 +108,12 @@ describe('selectors', () => {
     })
 
     it('should call document.getElementsByClassName once', () => {
+
       dom.getClass('container')
-      expect(spy.callCount).to.equal(1)
+
+      testArg(0, 'container', spy)
+
+      called(1, spy)
     })
   })
 
@@ -121,7 +131,7 @@ describe('selectors', () => {
 
     it('should call document.getElementsByTagName once', () => {
       dom.getTags('input')
-      expect(spy.callCount).to.equal(1)
+      called(1, spy)
     })
   })
 
@@ -138,8 +148,12 @@ describe('selectors', () => {
     })
 
     it('should call document.querySelector once', () => {
+
       dom.select('.container')
-      expect(spy.callCount).to.equal(1)
+
+      testArg(0, '.container', spy)
+
+      called(1, spy)
     })
   })
 
@@ -156,9 +170,34 @@ describe('selectors', () => {
     })
 
     it('should call document.querySelectorAll once', () => {
+
       dom.selectAll('wrapper')
-      expect(spy.callCount).to.equal(1)
+
+      testArg(0, 'wrapper', spy)
+
+      called(1, spy)
     })
   })
 
 })
+
+/**
+ * Tests that the spy was called with a given argument
+ *
+ * @param callIndex which call
+ * @param spy The spy function to test
+ * @param arg which argument to test
+ */
+function testArg(callIndex, arg, spy) {
+  expect(spy.getCall(callIndex).args[0]).to.equal(arg)
+}
+
+/**
+ * Amount of times the spy was called
+ *
+ * @param amount
+ * @param spy
+ */
+function called(amount, spy) {
+  expect(spy.callCount).to.equal(amount)
+}
