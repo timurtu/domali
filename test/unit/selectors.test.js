@@ -63,7 +63,7 @@ describe('selectors', () => {
       called(1, spy)
     })
 
-    it('should calls document.createElement 3 times', () => {
+    it('should call document.createElement 3 times', () => {
 
       dom.create('h1', 'a', 'p')
 
