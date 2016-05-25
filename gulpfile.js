@@ -7,8 +7,8 @@ const changed = require('gulp-changed')
 const paths = {
   allJS: 'src/**/*.js',
   output: 'lib',
-  testEntry: 'src/test/domali.test.js',
-  allTests: 'test/**/*.js',
+  testEntry: 'src/test/unit/domali.test.js',
+  allTests: 'test/unit/**/*.js',
   testOutput: './'
 }
 

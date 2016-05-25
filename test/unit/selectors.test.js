@@ -2,9 +2,9 @@
  * Created by timur on 5/22/16.
  */
 
-import dom from '../lib/domali'
+import dom from '../../lib/domali'
 
-import {testArg, called} from './test.utils'
+import {testArg, called} from './test.utils.js'
 
 describe('selectors', () => {
 
@@ -54,7 +54,7 @@ describe('selectors', () => {
       document.createElement.restore()
     })
 
-    it('calls document.createElement once', () => {
+    it('should call document.createElement once', () => {
 
       dom.create('div')
 
@@ -63,7 +63,7 @@ describe('selectors', () => {
       called(1, spy)
     })
 
-    it('calls document.createElement 3 times', () => {
+    it('should calls document.createElement 3 times', () => {
 
       dom.create('h1', 'a', 'p')
 
