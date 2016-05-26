@@ -2,7 +2,7 @@
  * Created by timur on 5/24/16.
  */
 
-import dom from '../../../lib/domali'
+import dom from '../../../../lib/domali'
 
 describe('node functions', () => {
 
@@ -16,9 +16,7 @@ describe('node functions', () => {
         id: 'bar'
       })
 
-      console.log(foo.getAttribute('id'))
-
-      expect(foo.getAttribute('id')).to.equal('bar')
+      expect(dom.get(foo, 'id')).to.equal('bar')
 
     })
 

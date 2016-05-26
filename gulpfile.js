@@ -5,35 +5,50 @@ const babel = require('gulp-babel')
 const changed = require('gulp-changed')
 
 const paths = {
-  allJS: 'src/**/*.js',
+
+  source: 'src/**/*.js',
   output: 'lib',
-  testEntry: 'src/test/unit/domali.test.js',
-  allTests: 'test/unit/**/*.js',
-  testOutput: './test'
+
+  unitTestEntry: 'test/unit/src/domali.test.js',
+  unitTestOutput: './test',
+
+  appEntry: 'test/app/src/app.js',
+  appOutput: './test',
+
+  unitTestSrc: 'test/unit/src/**/*.js',
+  appSrc: 'test/app/src/**/*.js',
+  notNodeModules: '!**/*node_modules'
 }
 
 gulp.task('watch', ['test'], () => {
-  gulp.watch([paths.allJS, paths.allTests], ['test'])
+  gulp.watch([paths.source, paths.unitTestSrc, paths.appSrc], ['test'])
 })
 
-gulp.task('test', ['build-tests'], (done) => {
+gulp.task('test', ['build-unit-tests'], (done) => {
   new Server({
-    configFile: __dirname + '/karma.conf.js',
+    configFile: __dirname + '/test/unit/karma.conf.js',
     singleRun: true
   }, function () {
     done()
   }).start()
 })
 
-gulp.task('build-tests', ['build'], () => {
-  return gulp.src(paths.testEntry)
-    .pipe(changed(paths.output))
-    .pipe(webpack(require('./webpack.config')))
-    .pipe(gulp.dest(paths.testOutput))
+gulp.task('build-unit-tests', ['build'], () => {
+  return gulp.src(paths.unitTestEntry)
+    .pipe(changed(paths.unitTestOutput + '/*'))
+    .pipe(webpack(require('./test/unit/webpack.config')))
+    .pipe(gulp.dest(paths.unitTestOutput))
+})
+
+gulp.task('build-app', () => {
+  return gulp.src(paths.appEntry)
+    .pipe(changed(paths.appOutput + '/*'))
+    .pipe(webpack(require('./test/app/webpack.config')))
+    .pipe(gulp.dest(paths.appOutput))
 })
 
 gulp.task('build', () => {
-  return gulp.src(paths.allJS)
+  return gulp.src(paths.source)
     .pipe(changed(paths.output))
     .pipe(babel())
     .pipe(gulp.dest(paths.output))

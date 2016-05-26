@@ -8,7 +8,7 @@ module.exports = function (config) {
 
     files: [
       {
-        pattern: 'test/test.js',
+        pattern: './dist/test.js',
         watched: true,
         served: true,
         included: true

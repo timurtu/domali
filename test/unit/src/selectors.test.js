@@ -2,9 +2,9 @@
  * Created by timur on 5/22/16.
  */
 
-import dom from '../../lib/domali'
+import dom from '../../../lib/domali'
 
-import {testArg, called} from './test.utils.js'
+import {testArg, called} from '../test.utils.js'
 
 describe('selectors', () => {
 

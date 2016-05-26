@@ -6,9 +6,11 @@ import dom from 'domali'
 
 const div = dom.create('div')
 
-div.setAttribute('id', 'foo')
+div.set(div, {
+  id: 'foo'
+})
 
-document.body.appendChild(div)
+dom.render(div)
 
 div.textContent = 'foo'
 

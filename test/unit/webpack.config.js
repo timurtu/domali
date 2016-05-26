@@ -1,12 +1,11 @@
-/**
- * Created by timur on 5/24/16.
- */
-
 module.exports = {
-  entry: './app.js',
+
+  entry: {
+    test: './test/unit/src/domali.test.js'
+  },
+
   output: {
-    path: './',
-    filename: 'bundle.js'
+    filename: 'unit/dist/[name].js'
   },
 
   module: {

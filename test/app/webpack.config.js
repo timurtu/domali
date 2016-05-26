@@ -1,11 +1,11 @@
 module.exports = {
 
   entry: {
-    test: './test/unit/domali.test.js'
+    test: './test/app/src/app.js'
   },
 
   output: {
-    filename: '[name].js'
+    filename: 'test/app/dist/bundle.js'
   },
 
   module: {
