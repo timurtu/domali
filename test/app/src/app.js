@@ -6,7 +6,7 @@ import dom from 'domali'
 
 const div = dom.create('div')
 
-div.set(div, {
+dom.set(div, {
   id: 'foo'
 })
 

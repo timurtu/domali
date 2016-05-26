@@ -20,8 +20,8 @@ const paths = {
   notNodeModules: '!**/*node_modules'
 }
 
-gulp.task('watch', ['test'], () => {
-  gulp.watch([paths.source, paths.unitTestSrc, paths.appSrc], ['test'])
+gulp.task('watch', ['test', 'build-app'], () => {
+  gulp.watch([paths.source, paths.unitTestSrc, paths.appSrc], ['test', 'build-app'])
 })
 
 gulp.task('test', ['build-unit-tests'], (done) => {
@@ -43,7 +43,7 @@ gulp.task('build-unit-tests', ['build'], () => {
 gulp.task('build-app', () => {
   return gulp.src(paths.appEntry)
     .pipe(changed(paths.appOutput + '/*'))
-    .pipe(webpack(require('./test/app/webpack.config')))
+    .pipe(webpack(require('./test/app/webpack.config.js')))
     .pipe(gulp.dest(paths.appOutput))
 })
 

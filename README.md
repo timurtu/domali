@@ -35,4 +35,5 @@ over the native DOM API.
 1. `git clone https://github.com/timurtu/domali.git`
 1. `cd domali`
 1. `npm install` to install dev dependencies
-1. `gulp watch` to run tests
+1. `gulp watch` to run unit tests
+1. `npm start` to run tests and test app

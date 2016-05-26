@@ -3,8 +3,9 @@
   "version": "1.7.3",
   "description": "Alias library for using the DOM API",
   "scripts": {
+    "start": "npm-run-all --parallel test serve",
     "test": "gulp watch",
-    "start": "gulp build-app && webpack-dev-server app/index.html --hot --open",
+    "serve": "lite-server --config=bs-config.json",
     "clean": "rimraf dist test/**/dist coverage"
   },
   "main": "lib/domali.js",
@@ -43,7 +44,9 @@
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-sinon": "^1.0.5",
     "karma-spec-reporter": "0.0.26",
+    "lite-server": "^2.2.0",
     "mocha": "^2.5.2",
+    "npm-run-all": "^2.1.1",
     "object-assign": "^4.1.0",
     "phantomjs-prebuilt": "^2.1.7",
     "rimraf": "^2.5.2",

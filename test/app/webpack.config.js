@@ -5,7 +5,7 @@ module.exports = {
   },
 
   output: {
-    filename: 'test/app/dist/bundle.js'
+    filename: 'app/dist/bundle.js'
   },
 
   module: {

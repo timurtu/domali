@@ -5,6 +5,6 @@
   "main": "index.html",
   "license": "ISC",
   "dependencies": {
-    "domali": "^1.7.1"
+    "domali": "^1.7.3"
   }
 }
