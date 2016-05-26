@@ -4,14 +4,15 @@
 
 import dom from 'domali'
 
-const div = dom.create('div')
+const foo = dom.create('foo')
 
-dom.set(div, {
-  id: 'foo'
+dom.set(foo, {
+  id: 'foo',
+  class: 'foo'
 })
 
-dom.render(div)
+dom.render(foo)
 
-div.textContent = 'foo'
+foo.textContent = 'foo'
 
 console.log(dom.getId('foo'))
