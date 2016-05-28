@@ -16,7 +16,7 @@ describe('node functions', () => {
         id: 'bar'
       })
 
-      expect(dom.get(foo, 'id')).to.equal('bar')
+      expect(foo.getAttribute('id')).to.equal('bar')
 
     })
 
@@ -28,7 +28,7 @@ describe('node functions', () => {
 
       const foobar = dom.create('foobar')
 
-      dom.set(foobar, {id: 'foobar'})
+      foobar.setAttribute('id', 'foobar')
 
       expect(dom.get(foobar, 'id')).to.equal('foobar')
 
