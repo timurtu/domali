@@ -5,22 +5,36 @@ const foo = dom.getId('foo')
 ```
 
 ### Get Multiple Elements by id
-`const [ foo, bar, baz ] = dom.getId('foo', 'bar', 'baz')`
+```javascript
+const [ foo, bar, baz ] = dom.getId('foo', 'bar', 'baz')
+```
 
 ### Create Element
-`dom.create('div')`
+```javascript
+dom.create('div')
+```
 
 ### Create Multiple Elements
-`const [ p, a, img ] = dom.create('p', 'a', 'img')`
+```javascript
+const [ p, a, img ] = dom.create('p', 'a', 'img')
+```
 
 ### Get Elements by Class Name
-`dom.getClass('bar')`
+```javascript
+dom.getClass('bar')
+```
 
 ### Get Elements by Tag Name
-`dom.getTags('div')`
+```javascript
+dom.getTags('div')
+```
 
 ### Selecting an Element
-`dom.select('#foo')`
+```javascript
+dom.select('#foo')
+```
 
 ### Selecting Multiple Elements
-`dom.selectAll('.baz')`
+```javacript
+dom.selectAll('.baz')
+```
