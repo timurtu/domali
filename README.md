@@ -36,4 +36,5 @@ over the native DOM API.
 1. `cd domali`
 1. `npm install` to install dev dependencies
 1. `gulp watch` to run unit tests
-1. `cd test/app && npm install && cd ../.. && npm start` to run tests and start the test app
+1. `cd test/app && npm install && cd ../..` to install domali in the test app
+1. `npm start` to run tests and start the test app
