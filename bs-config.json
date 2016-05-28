@@ -1,5 +1,5 @@
 {
   "port": 8000,
-  "files": ["./**/*.{js}", "!node_modules"],
+  "files": ["./**/*.{js,html}", "!node_modules"],
   "server": { "baseDir": "test/app" }
 }

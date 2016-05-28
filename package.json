@@ -6,7 +6,7 @@
     "start": "npm-run-all --parallel test serve",
     "test": "gulp watch",
     "serve": "lite-server --config=bs-config.json",
-    "clean": "rimraf dist test/**/dist coverage"
+    "clean": "rimraf lib test/**/dist test/**/coverage **/node_modules"
   },
   "main": "lib/domali.js",
   "files": [
