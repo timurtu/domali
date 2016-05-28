@@ -8,7 +8,7 @@
  * @param ids Any number of id strings
  * @returns elements as an array
  */
-function getId(...ids) {
+export function getId(...ids) {
   return (ids.length > 1) ?
     ids.map(id => document.getElementById(id)) :
     document.getElementById(ids[0])
@@ -20,33 +20,24 @@ function getId(...ids) {
  * @param elements Any number of element tag strings
  * @returns elements as an array
  */
-function create(...elements) {
+export function create(...elements) {
   return (elements.length > 1) ?
     elements.map(element => document.createElement(element)) :
     document.createElement(elements[0])
 }
 
-function getClass(className) {
+export function getClass(className) {
   return document.getElementsByClassName(className)
 }
 
-function getTags(tagName) {
+export function getTags(tagName) {
   return document.getElementsByTagName(tagName)
 }
 
-function select(query) {
+export function select(query) {
   return document.querySelector(query)
 }
 
-function selectAll(query) {
+export function selectAll(query) {
   return document.querySelectorAll(query)
-}
-
-export {
-  getId,
-  create,
-  getClass,
-  getTags,
-  select,
-  selectAll
 }

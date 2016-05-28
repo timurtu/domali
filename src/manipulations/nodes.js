@@ -9,9 +9,7 @@ export function set(element, props) {
 }
 
 export function get(element, ...props) {
-
   return (props.length > 1) ?
     props.map(prop => element.getAttribute(prop)) :
     element.getAttribute(props[0])
-
 }
