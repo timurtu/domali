@@ -4,7 +4,7 @@
 
 import dom from '../../../lib/domali'
 
-import {testArg, called} from '../test.utils.js'
+import { testArg, called } from '../test.utils.js'
 
 describe('selectors', () => {
 

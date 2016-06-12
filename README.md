@@ -1,8 +1,6 @@
 # Alias Library for the DOM API
 
-The goal of domali is to provide a JavaScript DOM API that is less verbose and
-more readable, while keeping the core functionality intact. You can use
-all of the native JavaScript DOM functions and objects with domali.
+The goal of domali is to provide a JavaScript DOM API that is less verbose and more readable, while keeping the core functionality intact. You can use all of the native JavaScript DOM functions and objects with domali.
 
 ## Install
 Install domali with either npm or jspm
@@ -21,14 +19,9 @@ console.log(foo, bar, baz)
 > For more, refer to the [Documentation](docs/api.md)
 
 ## Problem Statement
-- No matter how
-[well documented](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
-it is, many parts of the JavaScript DOM API are verbose, and will have you
-writing the same code more than once.
+- No matter how [well documented](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) it is, many parts of the JavaScript DOM API are verbose, and will have you writing the same code more than once.
 
-- Using JavaScript DOM manipulation libraries like jQuery make your code
-leaner, but also force you to conform to them, taking away your control
-over the native DOM API.
+- Using JavaScript DOM manipulation libraries like jQuery make your code leaner, but also force you to conform to them, taking away your control over the native DOM API.
 
 ## Build
 
