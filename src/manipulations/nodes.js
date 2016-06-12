@@ -2,14 +2,20 @@
  * Created by timur on 5/24/16.
  */
 
-export function set(element, props) {
+Node.prototype.set = function (props) {
   for (let key in props) {
-    element.setAttribute(key, props[key])
+    this.setAttribute(key, props[key])
   }
+  return this
 }
 
-export function get(element, ...props) {
-  return (props.length > 1) ?
-    props.map(prop => element.getAttribute(prop)) :
-    element.getAttribute(props[0])
+Node.prototype.get = function (...keys) {
+
+  if (keys.length === 1) {
+    return this.getAttribute(keys[0])
+  }
+
+  return keys.map(key => {
+    return this.getAttribute(key)
+  })
 }

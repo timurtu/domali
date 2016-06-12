@@ -21,9 +21,13 @@ export function getId(...ids) {
  * @returns elements as an array
  */
 export function create(...elements) {
-  return (elements.length > 1) ?
-    elements.map(element => document.createElement(element)) :
-    document.createElement(elements[0])
+
+  const domNodes = elements.map(element => {
+    const domNode = document.createElement(element)
+    return domNode
+  })
+
+  return (domNodes.length > 1) ? domNodes : domNodes[0]
 }
 
 export function getClass(className) {

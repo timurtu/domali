@@ -27,6 +27,7 @@ console.log(foo, bar, baz)
 
 1. `git clone https://github.com/timurtu/domali.git`
 1. `cd domali`
+1. `npm install -g gulp-cli` to install the gulp cli globally
 1. `npm install` to install dev dependencies
 1. `gulp watch` to run unit tests
 1. `cd test/app && npm install && cd ../..` to install domali in the test app

@@ -56,6 +56,7 @@ describe('selectors', () => {
 
     it('should create an element', () => {
       const div = dom.create('div')
+      console.log(div)
       expect(div.outerHTML).to.equal('<div></div>')
       expect(div.innerHTML).to.equal('')
     })
