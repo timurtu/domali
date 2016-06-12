@@ -19,3 +19,4 @@ import dom from 'domali'
 ```
 
 [Selectors](selectors.md)
+[Manipulations](manipulations.md)
