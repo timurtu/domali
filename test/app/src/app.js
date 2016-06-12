@@ -4,15 +4,14 @@
 
 import dom from 'domali'
 
-const foo = dom.create('foo')
+const foo = dom
+  .create('foo')
+  .set({
+    id: 'bar',
+    class: 'baz'
+  })
 
-dom.set(foo, {
-  id: 'foo',
-  class: 'foo'
-})
+  dom.render(foo)
 
-dom.render(foo)
+foo.textContent = 'testing 123...'
 
-foo.textContent = 'foo'
-
-console.log(dom.getId('foo'))
