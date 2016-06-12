@@ -1,4 +1,6 @@
 
+## domali manipulations
+
 ### Set a DOM Node attribute
 ```javascript
 const div = dom
@@ -47,3 +49,9 @@ const [imgId, imgSrc, imgClass] = dom
   // imgSrc = some-image.png
   // imgClass = photo
 ```
+
+[Main](api.md)
+
+[Selectors](selectors.md)
+
+[Manipulations](manipulations.md)

@@ -1,4 +1,6 @@
 
+## domali selectors
+
 ### Get Element by id
 ```javascript
 const foo = dom.getId('foo')
@@ -38,3 +40,9 @@ const foo = dom.select('#foo')
 ```javacript
 const baz = dom.selectAll('.baz')
 ```
+
+[Main](api.md)
+
+[Selectors](selectors.md)
+
+[Manipulations](manipulations.md)

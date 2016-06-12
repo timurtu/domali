@@ -1,4 +1,4 @@
-# domali documentation
+# domali docs
 
 ## Install domali with npm or jspm
 
@@ -18,5 +18,8 @@ Domali assumes ES6.
 import dom from 'domali'
 ```
 
+[Main](api.md)
+
 [Selectors](selectors.md)
+
 [Manipulations](manipulations.md)
