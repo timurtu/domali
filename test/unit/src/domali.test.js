@@ -1,4 +1,5 @@
 import './create.test'
-import './selectors.test'
+import './get.test'
+import './select.test'
 import './node.test'
 import './render.test'
