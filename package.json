@@ -1,6 +1,6 @@
 {
   "name": "domali",
-  "version": "1.8.0",
+  "version": "2.0.0",
   "description": "Alias library for using the DOM API",
   "scripts": {
     "start": "npm-run-all --parallel test serve",
