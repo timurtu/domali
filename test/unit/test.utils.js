@@ -9,9 +9,7 @@
  * @param spy The spy function to test
  * @param arg which argument to test
  */
-export function testArg(callIndex, arg, spy) {
-  expect(spy.getCall(callIndex).args[0]).to.equal(arg)
-}
+export const testArg = (callIndex, arg, spy) => expect(spy.getCall(callIndex).args[0]).to.equal(arg)
 
 /**
  * Amount of times the spy was called
@@ -19,6 +17,4 @@ export function testArg(callIndex, arg, spy) {
  * @param amount
  * @param spy
  */
-export function called(amount, spy) {
-  expect(spy.callCount).to.equal(amount)
-}
+export const called = (amount, spy) => expect(spy.callCount).to.equal(amount)

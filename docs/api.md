@@ -1,25 +1,26 @@
-# domali docs
-
-## Install domali with npm or jspm
-
+### Install domali with npm
 `npm install --save domali`
 
+### Or install domali with jspm
 `jspm install domali`
 
-Domali assumes module loading in the browser.
-
-Popular choices to use for browser module loading include webpack, jspm, and browserify.
-
-Domali assumes ES6.
+domali assumes module loading in the browser. Popular choices to use for browser module loading include [webpack](https://webpack.github.io/), [jspm](http://jspm.io), and [browserify](http://browserify.org/). domali assumes ES6.
 
 ## Using domali
 
 ```javascript
 import dom from 'domali'
+
+dom.render(dom.create('div'))
 ```
 
-[Main](api.md)
+Executing the above snippet will result in the following when loaded in the browser.
 
-[Selectors](selectors.md)
-
-[Manipulations](manipulations.md)
+```html
+...
+<body>
+  ...
+  <div></div>
+</body>
+...
+```

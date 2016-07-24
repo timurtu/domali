@@ -1,3 +1,4 @@
-import './selectors.test.js'
-import './manipulations/nodes.test'
-import './manipulations/render.test'
+import './create.test'
+import './selectors.test'
+import './node.test'
+import './render.test'
