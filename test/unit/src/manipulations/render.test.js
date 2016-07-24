@@ -30,6 +30,6 @@ describe('clear', () => {
 
     dom.clear()
 
-    expect(document.getElementById('link')).to.be.null
+    expect(document.getElementById('link')).to.be.a('null')
   })
 })

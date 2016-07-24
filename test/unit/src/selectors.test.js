@@ -44,7 +44,7 @@ describe('selectors', () => {
 
   describe('create', () => {
 
-    var spy
+    let spy
 
     beforeEach(() => {
       spy = sinon.spy(document, 'createElement')
@@ -55,10 +55,11 @@ describe('selectors', () => {
     })
 
     it('should create an element', () => {
-      const div = dom.create('div')
-      console.log(div)
-      expect(div.outerHTML).to.equal('<div></div>')
-      expect(div.innerHTML).to.equal('')
+      expect(dom.create('div').outerHTML).to.equal('<div></div>')
+    })
+    
+    it('should create an empty element', () => {
+      expect(dom.create('div').innerHTML).to.equal('')
     })
 
     it('should call document.createElement once', () => {
@@ -170,5 +171,4 @@ describe('selectors', () => {
       called(1, spy)
     })
   })
-
 })

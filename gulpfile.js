@@ -28,9 +28,7 @@ gulp.task('test', ['build-unit-tests'], (done) => {
   new Server({
     configFile: __dirname + '/test/unit/karma.conf.js',
     singleRun: true
-  }, function () {
-    done()
-  }).start()
+  }, () => done()).start()
 })
 
 gulp.task('build-unit-tests', ['build'], () => {
