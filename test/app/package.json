@@ -1,10 +1,10 @@
 {
-  "name": "system",
+  "name": "app",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
   "license": "ISC",
   "dependencies": {
-    "domali": "^1.8.0"
+    "domali": "^2.0.0"
   }
 }
