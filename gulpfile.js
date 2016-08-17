@@ -16,7 +16,9 @@ const paths = {
   test_entry: 'test/domali.test.js',
   test_src: 'test/*.test.js',
   test_dist: 'test/dist',
-  webpack_conf: __dirname + '/webpack.conf.js'
+  
+  karma_conf: `${__dirname}/karma.conf.js`,
+  webpack_conf: require('./webpack.config')
 }
 
 gulp.task('watch', ['test'], () => {

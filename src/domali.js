@@ -5,8 +5,11 @@
 import { getId, getClass, getTags } from './get'
 import { select, selectAll } from './select'
 import { create } from './create'
-import './node'
 import { render, clear } from './render'
+import './node'
+import './text'
+import './children'
+
 
 export default {
   

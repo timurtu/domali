@@ -2,4 +2,14 @@
  * Created by timur on 8/17/16.
  */
 
-export const text = msg => document.createTextNode(msg)
+Node.prototype.text = function (msg) {
+  
+  if(this.currentTextNode) {
+    this.removeChild(this.currentTextNode)
+  }
+  
+  this.currentTextNode = document.createTextNode(msg)
+  this.appendChild(this.currentTextNode)
+  
+  return this
+}

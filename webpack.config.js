@@ -1,7 +1,7 @@
 module.exports = {
 
   entry: {
-    test: './test/domali.test.js'
+    test: './test/index.test.js'
   },
   output: {
     filename: '[name].js'

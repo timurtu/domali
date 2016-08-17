@@ -2,28 +2,18 @@
  * Created by timur on 8/17/16.
  */
 
-<<<<<<< HEAD
-import test from 'ava'
-import sinon from 'sinon'
-import { text } from '../lib/text'
+import dom from '../lib/domali'
 
-let spy
-const document = {
-  createTextNode(msg) {
-    
-  }
-}
-
-test.beforeEach(() => {
-  spy = sinon.spy(document, 'createTextNode')
+describe('text', () => {
+  
+  it('should create a new text node', () => {
+    const div = dom.create('div').text('hello')
+    expect(div.innerHTML).to.equal('hello')
+  })
+  
+  it('should update an existing text node', () => {
+    const div = dom.create('div').text('hello').text('goodbye')
+    expect(div.innerHTML).to.equal('goodbye')
+  })
+  
 })
-
-test('should create a new text node', t => {
-  const msg = 'hello'
-  text(msg)
-  t.true(spy.calledWithExactly(msg))
-})
-
-
-=======
->>>>>>> main
