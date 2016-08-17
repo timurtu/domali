@@ -1,6 +1,6 @@
 # Alias Library for the DOM API
 
-[![Build Status](https://travis-ci.org/timurtu/domali.svg?branch=master)](https://travis-ci.org/timurtu/domali)
+[![Build Status](https://travis-ci.org/timurtu/domali.svg?branch=master)](https://travis-ci.org/timurtu/domali?branch=master)
 
 The goal of domali is to provide a JavaScript DOM API that is less verbose and more readable, while keeping the core functionality intact. You can use all of the native JavaScript DOM functions and objects with domali.
 
