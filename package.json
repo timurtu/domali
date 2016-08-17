@@ -1,6 +1,6 @@
 {
   "name": "domali",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Alias library for using the DOM API",
   "main": "lib/domali.js",
   "scripts": {
