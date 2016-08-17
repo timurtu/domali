@@ -9,15 +9,14 @@ import './node'
 import { render, clear } from './render'
 
 export default {
-	
-	getId,
-	create,
-	getClass,
-	getTags,
-	select,
-	selectAll,
-	
-	render,
-	clear
-	
+  
+  getId,
+  create,
+  getClass,
+  getTags,
+  select,
+  selectAll,
+  render,
+  clear
+  
 }

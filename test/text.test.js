@@ -2,6 +2,7 @@
  * Created by timur on 8/17/16.
  */
 
+<<<<<<< HEAD
 import test from 'ava'
 import sinon from 'sinon'
 import { text } from '../lib/text'
@@ -24,3 +25,5 @@ test('should create a new text node', t => {
 })
 
 
+=======
+>>>>>>> main
