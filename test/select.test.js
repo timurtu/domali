@@ -3,6 +3,7 @@
  */
 
 import dom from '../lib/domali'
+import sinon from 'sinon'
 
 import {
   testArg,

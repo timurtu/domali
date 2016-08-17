@@ -9,6 +9,6 @@
  * @returns elements as an array
  */
 export const create = (...elements) => {
-	const domNodes = elements.map(el => document.createElement(el))
-	return (domNodes.length > 1) ? domNodes : domNodes[0]
+  const domNodes = elements.map(el => document.createElement(el))
+  return (domNodes.length > 1) ? domNodes : domNodes[0]
 }
