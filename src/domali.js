@@ -6,8 +6,7 @@ import { getId, getClass, getTags } from './get'
 import { select, selectAll } from './select'
 import { create } from './create'
 import { render, clear } from './render'
-import './node'
-import './text'
+import { clone } from './node'
 import './children'
 
 
@@ -20,6 +19,6 @@ export default {
   select,
   selectAll,
   render,
-  clear
-  
+  clear,
+  clone
 }

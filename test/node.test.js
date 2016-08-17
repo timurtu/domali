@@ -2,7 +2,6 @@
  * Created by timur on 5/24/16.
  */
 
-import { expect } from 'chai'
 import dom from '../lib/domali'
 
 
@@ -14,9 +13,7 @@ describe('node functions', function () {
       
       const foo = document.createElement('div')
       
-      foo.set({
-        id: 'bar'
-      })
+      foo.set({ id: 'bar' })
       
       expect(foo.getAttribute('id')).to.equal('bar')
     })
@@ -99,6 +96,60 @@ describe('node functions', function () {
       expect(imgSrc).to.equal('my-image.png')
       expect(imgClass).to.equal('photo')
       expect(imgId).to.equal('main-image')
+    })
+    
+  })
+  
+  describe('text', function () {
+    
+    it('should create a new text node', function () {
+      const div = dom.create('div').text('hello')
+      expect(div.innerHTML).to.equal('hello')
+    })
+    
+    it('should update an existing text node', function () {
+      const div = dom.create('div').text('hello').text('goodbye')
+      expect(div.innerHTML).to.equal('goodbye')
+    })
+    
+  })
+  
+  describe('clone', function () {
+    
+    it('should clone an existing element', () => {
+      
+      const div = dom.create('div').text('hey')
+      
+      const newDiv = dom.clone(div)
+      
+      const text = newDiv.innerHTML
+      
+      expect(text).to.equal('hey')
+    })
+    
+    it('should also clone child nodes', function () {
+      
+      const divs = dom.create('div')
+      
+      divs.push(dom.create('div'))
+      divs.push(dom.create('div'))
+      divs.push(dom.create('div'))
+      
+      const newDiv = dom.clone(divs)
+      
+      const newChildren = newDiv.innerHTML
+      
+      expect(newChildren).to.equal('<div></div><div></div><div></div>')
+    })
+    
+    it('should not mutate the original element', function () {
+      
+      const div = dom.create('div').text('hello')
+      
+      const newDiv = dom.clone(div).text('goodbye')
+      
+      expect(div.innerHTML).to.equal('hello')
+      expect(newDiv.innerHTML).to.equal('goodbye')
     })
     
   })

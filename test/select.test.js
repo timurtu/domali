@@ -4,8 +4,9 @@
 
 /*eslint-disable no-undef */
 
-import dom from '../lib/domali'
 import { testArg, called } from './test.utils.js'
+import dom from '../lib/domali'
+
 
 describe('select functions', function () {
 

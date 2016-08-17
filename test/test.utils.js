@@ -2,8 +2,6 @@
  * Created by timur on 5/24/16.
  */
 
-import { expect } from 'chai'
-
 /**
  * Tests that the spy was called with a given argument
  *

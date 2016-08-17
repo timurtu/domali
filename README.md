@@ -1,6 +1,6 @@
 # Alias Library for the DOM API
 
-[![Build Status](https://travis-ci.org/timurtu/domali.svg?branch=master)](https://travis-ci.org/timurtu/domali?branch=master) [![npm version](https://img.shields.io/badge/npm-2.0.3-blue.svg)](https://www.npmjs.com/package/domali)
+[![Build Status](https://travis-ci.org/timurtu/domali.svg?branch=master)](https://travis-ci.org/timurtu/domali?branch=master) [![npm version](https://img.shields.io/badge/npm-2.1.1-blue.svg)](https://www.npmjs.com/package/domali)
 
 The goal of domali is to provide a more readable DOM API while keeping the core functionality intact. You can use all of the native JavaScript DOM functions and objects with domali.
 
@@ -67,6 +67,15 @@ const [ p, a, img ] = dom.create('p', 'a', 'img')
 console.log(p === '<p></p>') // true
 console.log(a === '<a></a>') // true
 console.log(img === '<img></img>') // true
+```
+
+#### dom.clone (element) - Clone an existing element to a new element
+```javascript
+const div = dom.create('div').text('hey')
+      
+const newDiv = dom.clone(div)
+
+console.log(newDiv) // <div>hey</div>
 ```
 
 #### dom.render (element) - Render an element to the DOM

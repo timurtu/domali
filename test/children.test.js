@@ -93,6 +93,7 @@ describe('map', () => {
     const newDiv = divs.map(div => {
       
       assert(div)
+      
       return dom.create('a')
     })
     
