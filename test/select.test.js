@@ -2,13 +2,10 @@
  * Created by timur on 7/24/16.
  */
 
-import dom from '../lib/domali'
-import sinon from 'sinon'
+/*eslint-disable no-undef */
 
-import {
-  testArg,
-  called
-} from './test.utils.js'
+import dom from '../lib/domali'
+import { testArg, called } from './test.utils.js'
 
 describe('select functions', function () {
 

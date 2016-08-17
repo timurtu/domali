@@ -18,9 +18,9 @@ const paths = {
   webpack_conf: require('./webpack.config')
 }
 
-gulp.task('watch', ['test'], () =>
+gulp.task('watch', ['test'], () => {
   gulp.watch([paths.src, paths.test_src], ['test'])
-)
+})
 
 gulp.task('test', ['build-tests'], (done) =>
   new Server({
@@ -45,8 +45,9 @@ gulp.task('lint', ['clean'], () =>
   gulp.src([paths.src, paths.build_src, paths.test_src])
     .pipe(eslint())
     .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
 )
 
-gulp.task('clean', () => 
+gulp.task('clean', () =>
   Promise.join(rimrafAsync(paths.dist), rimrafAsync(paths.test_dist))
 )
