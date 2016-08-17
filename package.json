@@ -3,10 +3,8 @@
   "version": "2.0.1",
   "description": "Alias library for using the DOM API",
   "scripts": {
-    "start": "npm-run-all --parallel test serve",
-    "test": "gulp test",
-    "serve": "lite-server --config=bs-config.json",
-    "clean": "rimraf lib test/**/dist test/**/coverage **/node_modules"
+    "test": "ava -v",
+    "ava": "ava -w"
   },
   "main": "lib/domali.js",
   "files": [
@@ -30,6 +28,7 @@
   },
   "homepage": "https://github.com/timurtu/domali#readme",
   "devDependencies": {
+    "ava": "^0.16.0",
     "babel-core": "^6.9.0",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.9.0",
