@@ -63,7 +63,7 @@ describe('unshift', () => {
 
 describe('map', () => {
   
-  it('should transform all child nodes of a node', () => {
+  it('should transform all child nodes of an element', () => {
     
     const divs = dom.create('div')
     
@@ -80,5 +80,26 @@ describe('map', () => {
     const aTags = newDiv.innerHTML
     
     expect(aTags).to.equal('<a></a><a></a><a></a>')
+  })
+  
+  it('should not mutate the original element', () => {
+    
+    const divs = dom.create('div')
+    
+    divs.push(dom.create('div'))
+    divs.push(dom.create('div'))
+    divs.push(dom.create('div'))
+    
+    const newDiv = divs.map(div => {
+      
+      assert(div)
+      return dom.create('a')
+    })
+    
+    const aTags = newDiv.innerHTML
+    const divTags = divs.innerHTML
+    
+    expect(aTags).to.equal('<a></a><a></a><a></a>')
+    expect(divTags).to.equal('<div></div><div></div><div></div>')
   })
 })

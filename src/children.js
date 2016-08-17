@@ -3,19 +3,27 @@
  */
 
 Node.prototype.push = function (child) {
+  
   this.appendChild(child)
+  
   return this
 }
 
 Node.prototype.unshift = function (child) {
+  
   this.insertBefore(child, this.firstChild)
+  
   return this
 }
 
 Node.prototype.map = function (callback) {
+  
   if (this.hasChildNodes()) {
-    Array.prototype.forEach.call(this.childNodes, node =>
-      this.replaceChild(callback(node), node))
+    
+    const newNode = this.cloneNode(true)
+    
+    Array.prototype.map.call(newNode.childNodes, node => newNode.replaceChild(callback(node), node))
+    
+    return newNode
   }
-  return this
 }
