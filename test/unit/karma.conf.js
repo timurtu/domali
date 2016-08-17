@@ -15,6 +15,10 @@ module.exports = function (config) {
 			}
 		],
 		
+		preprocessors: {
+			'../../src/**/*.js': ['coverage']
+		},
+		
 		reporters: ['spec', 'coverage']
 	})
 }
